@@ -14,7 +14,7 @@ def api_root():
 
 @app.route('/classify/<input>')
 def classify(input):
-	with open('/sms-incoming/testing.json', 'r') as fp:
+	with open('/sms-incoming/blob/master/testing.json', 'r') as fp:
 		cl = NaiveBayesClassifier(fp, format="json")
 		return cl.classify(input)
 
